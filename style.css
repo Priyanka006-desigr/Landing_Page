@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --bg-dark: #060816;
+    --bg-dark: #000000;
     --card-bg: rgba(255, 255, 255, 0.03);
     --card-border: rgba(255, 255, 255, 0.08);
     --card-border-hover: rgba(255, 255, 255, 0.2);
@@ -56,27 +56,18 @@ body {
     -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
 }
 
-.bg-glow {
+.streetlight-beam {
     position: fixed;
-    width: 60vw;
-    height: 60vw;
-    border-radius: 50%;
-    filter: blur(150px);
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: 110vh;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
+    clip-path: polygon(35% 0, 65% 0, 100% 100%, 0% 100%);
+    filter: blur(50px);
     z-index: -1;
     pointer-events: none;
-    opacity: 0.15;
-}
-
-.glow-top-right {
-    top: -20%;
-    right: -10%;
-    background: radial-gradient(circle, var(--accent-purple), transparent);
-}
-
-.glow-bottom-left {
-    bottom: -20%;
-    left: -10%;
-    background: radial-gradient(circle, var(--accent-blue), transparent);
 }
 
 /* ================= TYPOGRAPHY & UTILITIES ================= */
@@ -191,7 +182,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(6, 8, 22, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--card-border);
 }
