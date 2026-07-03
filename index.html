@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTogether - Real-time Collaborative Coding</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-top-right"></div>
+    <div class="bg-glow glow-bottom-left"></div>
+    
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h2>CodeTogether</h2>
+            </div>
+            
+            <div class="nav-right" id="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#docs">Documentation</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+
+                <div class="nav-btn">
+                    <a href="#" class="signin">Sign In</a>
+                    <a href="#" class="btn primary">Get Started</a>
+                </div>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="product">
+        <div class="hero-content">
+            <div class="pill-badge">
+                <span class="pulse-dot"></span> v2.0 is now live
+            </div>
+            <h1>Better code,<br><span class="gradient-text">together.</span></h1>
+            <p class="hero-subtitle">
+                Build, collaborate, review, and ship code in real time with your entire team from anywhere.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn primary large">Get Started Free</a>
+                <a href="#" class="btn secondary large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    Watch Demo
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-mockup">
+            <div class="editor-window">
+                <div class="editor-header">
+                    <div class="mac-dots"><span></span><span></span><span></span></div>
+                    <div class="file-tabs">
+                        <div class="tab active">app.js</div>
+                        <div class="tab">style.css</div>
+                    </div>
+                    <div class="team-avatars">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="User" class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="User" class="avatar">
+                    </div>
+                </div>
+                <div class="editor-body">
+                    <div class="sidebar">
+                        <p class="explorer-title">EXPLORER</p>
+                        <ul>
+                            <li><span class="icon">📁</span> src</li>
+                            <li class="indent"><span class="icon">📄</span> app.js</li>
+                            <li class="indent"><span class="icon">📄</span> utils.js</li>
+                            <li><span class="icon">📁</span> public</li>
+                            <li class="indent"><span class="icon">📄</span> index.html</li>
+                        </ul>
+                    </div>
+                    <div class="code-area">
+                        <div class="line"><span class="number">1</span><span class="keyword">import</span> { useState } <span class="keyword">from</span> <span class="string">'react'</span>;</div>
+                        <div class="line"><span class="number">2</span></div>
+                        <div class="line"><span class="number">3</span><span class="keyword">export function</span> App() {</div>
+                        <div class="line"><span class="number">4</span>  <span class="keyword">const</span> [count, setCount] = useState(<span class="number-val">0</span>);</div>
+                        <div class="line"><span class="number">5</span></div>
+                        <div class="line relative">
+                            <span class="number">6</span>  <span class="keyword">return</span> (
+                            <div class="cursor-user cursor-1">
+                                <div class="cursor-caret"></div>
+                                <div class="cursor-name">Alex</div>
+                            </div>
+                        </div>
+                        <div class="line"><span class="number">7</span>    &lt;<span class="tag">div</span> <span class="attr">className</span>=<span class="string">"app"</span>&gt;</div>
+                        <div class="line relative">
+                            <span class="number">8</span>      &lt;<span class="tag">h1</span>&gt;Building together&lt;/<span class="tag">h1</span>&gt;
+                            <div class="cursor-user cursor-2">
+                                <div class="cursor-caret"></div>
+                                <div class="cursor-name">Sarah</div>
+                            </div>
+                        </div>
+                        <div class="line"><span class="number">9</span>      &lt;<span class="tag">button</span> <span class="attr">onClick</span>={<span class="keyword">()</span> =&gt; setCount(count + <span class="number-val">1</span>)}&gt;</div>
+                        <div class="line"><span class="number">10</span>        Count is {count}</div>
+                        <div class="line"><span class="number">11</span>      &lt;/<span class="tag">button</span>&gt;</div>
+                        <div class="line"><span class="number">12</span>    &lt;/<span class="tag">div</span>&gt;</div>
+                        <div class="line"><span class="number">13</span>  );</div>
+                        <div class="line"><span class="number">14</span>}</div>
+                    </div>
+                    <div class="ai-sidebar">
+                        <div class="ai-header">✨ AI Assistant</div>
+                        <div class="ai-chat">
+                            <div class="ai-msg user">Can you optimize the state?</div>
+                            <div class="ai-msg bot">Sure! Since the state doesn't dictate a re-render in the wrapper, consider moving it...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="editor-footer">
+                    <div class="status-left"><span class="git-icon">⎇</span> main*</div>
+                    <div class="status-right"><span class="deploy-dot"></span> Vercel: Ready</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Everything your team needs</h2>
+            <p>A complete toolset engineered for high-performance software teams.</p>
+        </div>
+
+        <div class="grid-cards features-grid">
+            <div class="glass-card feature-card">
+                <div class="icon-wrap gradient-icon-1">👥</div>
+                <h3>Real-Time Collaboration</h3>
+                <p>Code together in real-time, see cursors, and instantly resolve conflicts without Git headaches.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div class="icon-wrap gradient-icon-2">✨</div>
+                <h3>AI Code Assistant</h3>
+                <p>Get smart, context-aware suggestions, auto-complete, and instant bug fixes directly in your editor.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div class="icon-wrap gradient-icon-3">💬</div>
+                <h3>Live Team Chat</h3>
+                <p>Discuss implementations, architecture, and leave inline comments without switching apps.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div class="icon-wrap gradient-icon-4">🕒</div>
+                <h3>Version History</h3>
+                <p>Time-travel through every keystroke. Restore previous versions instantly with infinite history.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div class="icon-wrap gradient-icon-5">🔒</div>
+                <h3>Secure Cloud Workspace</h3>
+                <p>SOC2 compliant infrastructure. Your intellectual property is protected by enterprise-grade encryption.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div class="icon-wrap gradient-icon-6">🚀</div>
+                <h3>One-Click Deployment</h3>
+                <p>Deploy instantly to Vercel, AWS, or your custom infrastructure right from the workspace.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="how-it-works">
+        <div class="section-header">
+            <h2>From idea to production in minutes</h2>
+            <p>A streamlined workflow designed to eliminate friction.</p>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-step">
+                <div class="step-circle">1</div>
+                <div class="glass-card step-card">
+                    <h3>Create Workspace</h3>
+                    <p>Spin up an environment in seconds. No local setup required.</p>
+                </div>
+            </div>
+
+            <div class="timeline-step">
+                <div class="step-circle">2</div>
+                <div class="glass-card step-card">
+                    <h3>Invite Team</h3>
+                    <p>Share a secure link. Collaborators join instantly in the browser.</p>
+                </div>
+            </div>
+
+            <div class="timeline-step">
+                <div class="step-circle">3</div>
+                <div class="glass-card step-card">
+                    <h3>Collaborate Live</h3>
+                    <p>Write code, run tests, and debug together in real-time.</p>
+                </div>
+            </div>
+
+            <div class="timeline-step">
+                <div class="step-circle">4</div>
+                <div class="glass-card step-card">
+                    <h3>Review & Deploy</h3>
+                    <p>Merge with confidence and deploy to your infrastructure instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats">
+        <div class="grid-cards stats-grid">
+            <div class="glass-card stat-card">
+                <h3 class="counter" data-target="99.9">0</h3><span class="suffix">%</span>
+                <p>Guaranteed Uptime</p>
+            </div>
+            <div class="glass-card stat-card">
+                <h3 class="counter" data-target="50">0</h3><span class="suffix">K+</span>
+                <p>Active Developers</p>
+            </div>
+            <div class="glass-card stat-card">
+                <h3 class="counter" data-target="120">0</h3><span class="suffix">+</span>
+                <p>Countries Reached</p>
+            </div>
+            <div class="glass-card stat-card">
+                <h3 class="counter" data-target="500">0</h3><span class="suffix">M+</span>
+                <p>Lines of Code</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= AI FEATURES ================= -->
+    <section class="ai-section">
+        <div class="section-header">
+            <h2>Supercharged by AI</h2>
+            <p>Your intelligent pair-programmer, always ready to help.</p>
+        </div>
+        
+        <div class="ai-container">
+            <div class="ai-features-list">
+                <div class="ai-feature-item active">
+                    <h4>Smart Code Completion</h4>
+                    <p>Predicts your next lines based on context.</p>
+                </div>
+                <div class="ai-feature-item">
+                    <h4>Bug Detection</h4>
+                    <p>Highlights vulnerabilities before you deploy.</p>
+                </div>
+                <div class="ai-feature-item">
+                    <h4>Refactoring Suggestions</h4>
+                    <p>Automated cleanup for cleaner, faster code.</p>
+                </div>
+                <div class="ai-feature-item">
+                    <h4>Documentation Generator</h4>
+                    <p>Generates rich docs directly from code.</p>
+                </div>
+            </div>
+            
+            <div class="ai-dashboard-mockup">
+                <div class="glass-card ai-window">
+                    <div class="ai-window-header">
+                        <span class="pulse-dot ai-dot"></span> Generating Refactor
+                    </div>
+                    <div class="ai-code-diff">
+                        <div class="diff-line removed">- const total = arr.reduce((a,b) => a+b, 0);</div>
+                        <div class="diff-line added">+ const total = sumArray(arr); // Modularized</div>
+                    </div>
+                    <button class="btn primary small block">Accept Change</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Loved by builders worldwide</h2>
+        </div>
+        <div class="grid-cards testimonials-grid">
+            <div class="glass-card review-card">
+                <div class="stars">★★★★★</div>
+                <p>"CodeTogether eliminated our staging environment bottlenecks. We now review and ship PRs collaboratively in half the time."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Dev">
+                    <div>
+                        <h4>Sarah Jenkins</h4>
+                        <span>Senior Engineer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card review-card">
+                <div class="stars">★★★★★</div>
+                <p>"As a student, the live collaboration is a game changer for group projects. The AI assistant helps me learn best practices on the fly."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?img=60" alt="Student">
+                    <div>
+                        <h4>David Chen</h4>
+                        <span>CS Student</span>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card review-card">
+                <div class="stars">★★★★★</div>
+                <p>"We built our entire MVP on CodeTogether. It's the most reliable, fast, and beautifully designed tool in our tech stack."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?img=33" alt="Founder">
+                    <div>
+                        <h4>Elena Rostova</h4>
+                        <span>Startup Founder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section class="pricing" id="pricing">
+        <div class="section-header">
+            <h2>Simple, transparent pricing</h2>
+            <p>Start for free, upgrade when you need to.</p>
+        </div>
+        
+        <div class="grid-cards pricing-grid">
+            <div class="glass-card pricing-card">
+                <h3>Free</h3>
+                <div class="price">$0<span>/mo</span></div>
+                <p>Perfect for individuals and students.</p>
+                <ul class="features-list">
+                    <li>✓ 3 Active Projects</li>
+                    <li>✓ Real-time collaboration</li>
+                    <li>✓ Community Support</li>
+                </ul>
+                <a href="#" class="btn secondary block">Get Started</a>
+            </div>
+            <div class="glass-card pricing-card pro">
+                <div class="pro-badge">Most Popular</div>
+                <h3>Pro</h3>
+                <div class="price">$15<span>/mo</span></div>
+                <p>For professional developers and teams.</p>
+                <ul class="features-list">
+                    <li>✓ Unlimited Projects</li>
+                    <li>✓ Advanced AI Assistant</li>
+                    <li>✓ 1-Click Deployments</li>
+                    <li>✓ Priority Support</li>
+                </ul>
+                <a href="#" class="btn primary block">Upgrade to Pro</a>
+            </div>
+            <div class="glass-card pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <p>For large organizations with strict needs.</p>
+                <ul class="features-list">
+                    <li>✓ SSO & Advanced Auth</li>
+                    <li>✓ VPC Peering</li>
+                    <li>✓ Dedicated Account Manager</li>
+                    <li>✓ Custom SLAs</li>
+                </ul>
+                <a href="#" class="btn secondary block">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is it free?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer a generous Free tier that includes all core collaboration features for up to 3 projects. You can upgrade to Pro when you need more.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Which languages are supported?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We support over 50+ programming languages out of the box, including full IntelliSense and syntax highlighting for JavaScript, Python, Rust, Go, and more.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can teams collaborate remotely?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. CodeTogether is designed specifically for remote and distributed teams, providing a low-latency collaborative experience globally.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is my code secure?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Security is our top priority. All code and communications are end-to-end encrypted. We are SOC2 compliant and regularly audited by third parties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="final-cta">
+        <div class="glass-card cta-banner">
+            <h2>Start Building Together Today</h2>
+            <p>Join thousands of developers shipping better software, faster.</p>
+            <div class="hero-buttons center">
+                <a href="#" class="btn primary large">Get Started</a>
+                <a href="#" class="btn secondary large">Book Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon small"></div>
+                    <h2>CodeTogether</h2>
+                </div>
+                <p>The premium platform for collaborative software engineering.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <a href="#">Features</a>
+                <a href="#">Integrations</a>
+                <a href="#">Pricing</a>
+                <a href="#">Changelog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#">Documentation</a>
+                <a href="#">Blog</a>
+                <a href="#">Community</a>
+                <a href="#">Help Center</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Legal & Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CodeTogether. All rights reserved.</p>
+            <div class="socials">
+                <a href="#">Twitter</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navRight = document.getElementById('nav-right');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navRight.classList.toggle('active');
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(faq => faq.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // lower is slower
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Intersection Observer to trigger counters when visible
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                if(entries[0].isIntersecting) {
+                    animateCounters();
+                    observer.disconnect();
+                }
+            }, { threshold: 0.5 });
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
